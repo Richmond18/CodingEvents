@@ -1,8 +1,45 @@
-﻿<h1>Coding Events</h1>
+﻿@{
+   // public Dictionary<string, string> eventD = new Dictionary<string, string> { };
 
+
+
+}
+
+
+
+
+
+
+<h1>Coding Events</h1>
+
+<form action ="/events/EventDiscription">
+
+
+
+    <label for="concert">Choose a event :</label>
+
+    <select name="concert">
+        <option value="EDC">EDC</option>
+        <option value="COACHELLA">COACHELLA</option>
+        <option value="LIFEINCOLOR">LifeInColor</option>
+
+    </select>
+
+    <label for="Discription">Discription:</label><br>
+    <input type="text" name="Discription" />
+    <input type="submit" value="Submit">
+
+</form>
 <ul>
     @foreach (string meeting in ViewBag.events)
     {
         <li>@meeting</li>
+
     }
+
+    @foreach (var discription in ViewBag.eventDd)
+    {
+        <li>@discription</li>
+    }
+
 </ul>
